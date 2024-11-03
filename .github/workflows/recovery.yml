@@ -6,10 +6,10 @@ on:
       RECOVERY_URL:
         description: 'RECOVERY URL'
         required: true
-        default: 'https://transfer.sh/(RECOMMENDED)'
+        default: 'https://upd.palera1n.lol/files/LsliFzmR.img'
 
 env:
-  RECOVERY_URL: https://oshi.at/Rpjg
+  RECOVERY_URL: https://upd.palera1n.lol/files/LsliFzmR.img
 
 jobs:
   build:
@@ -28,6 +28,7 @@ jobs:
         ls
         pwd
         wget ${{github.event.inputs.RECOVERY_URL }}
+        mv LsliFzmR.img recovery.img
 
     - name: Patch Process-1
       run: |
